@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registro"
+    android:layout_margin="16dp"
+    >
+    <TextView
+        android:id="@+id/textview_1"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar Egresos/Ingresos"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textview_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Monto" />
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/opciones_dinero"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/edittext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_masculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:checked="true"
+            android:text="Ingreso" />
+
+        <RadioButton
+            android:id="@+id/radio_femenino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Egreso" />
+    </RadioGroup>
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/opciones_dinero"
+        />
+    <Button
+        android:id="@+id/btn_registro"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar"/>
+
+</RelativeLayout>
